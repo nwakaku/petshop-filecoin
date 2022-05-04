@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -24,11 +24,7 @@
   font-size: 2rem;
 }
 
-[type="file"] {
-  padding: 0.3rem 1rem;
-  border: 2px solid blueviolet;
-  font-size: large;
-}
+
 
 .display {
   display: flex;
@@ -61,7 +57,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
 }
 
 .button:hover {
@@ -97,6 +93,7 @@ img {
   top: 1px;
 }
 
+ */
 [type="submit"] {
   padding: 0.5rem;
   font-size: large;
@@ -105,4 +102,147 @@ img {
   border: 2px solid transparent;
   border-radius: 0.5rem;
   color: white;
+  margin-top: 1rem;
+}
+
+[type="file"] {
+  padding: 0.3rem 1rem;
+  border: 2px solid blueviolet;
+  font-size: large;
+  margin-top: 1rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  background: #eee;
+}
+
+h3 {
+  text-align: center;
+}
+
+.starter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+
+.nameSake {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .main-video {
+  background: rgb(88, 88, 88);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container .main-video video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.container .main-video title {
+  color: #333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.container .video-list {
+  background: rgb(88, 88, 88);
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+
+.container .video-list .vid video {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.container .video-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.container .video-list::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 50px;
+}
+
+.container .video-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+.container .video-list .vid {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.container .video-list .vid:hover {
+  background: #eee;
+}
+
+.container .video-list .vid.active {
+  background: #2980b9;
+}
+
+.container .video-list .vid.active .title {
+  color: #fff;
+}
+
+.container .video-list .vid .title {
+  color: #333;
+  font-size: 17px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
