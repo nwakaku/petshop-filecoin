@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Web3Storage } from "web3.storage";
-import videos from "./videos/lap.mp4";
+import videos from "./videos/Lion.mp4";
 
 const client = new Web3Storage({
   token:
@@ -72,7 +72,12 @@ function App() {
         <div className="container">
           <div className="main-video">
             <div className="video">
-              <video src={imageSrc} controls muted autoPlay />
+              {imageSrc ? (
+                <video src={imageSrc} controls autoPlay />
+              ) : (
+                <video src={videos} controls loop autoPlay />
+              )}
+
               <h3 className="title">something nice</h3>
             </div>
           </div>

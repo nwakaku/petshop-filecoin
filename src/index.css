@@ -162,7 +162,7 @@ h3 {
 }
 
 .container .main-video {
-  background: rgb(88, 88, 88);
+  background: white;
   border-radius: 5px;
   padding: 10px;
 }
@@ -180,7 +180,7 @@ h3 {
 }
 
 .container .video-list {
-  background: rgb(88, 88, 88);
+  background: white;
   border-radius: 5px;
   height: 520px;
   overflow-y: scroll;
