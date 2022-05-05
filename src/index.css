@@ -94,7 +94,7 @@ img {
 }
 
  */
-[type="submit"] {
+.video_submit {
   padding: 0.5rem;
   font-size: large;
   background-color: blueviolet;
@@ -103,13 +103,15 @@ img {
   border-radius: 0.5rem;
   color: white;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
-[type="file"] {
+.video_files {
   padding: 0.3rem 1rem;
   border: 2px solid blueviolet;
   font-size: large;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700;800&display=swap");
@@ -144,6 +146,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
 }
 
 .container {
@@ -232,6 +235,13 @@ h3 {
 .container .video-list .vid .title {
   color: #333;
   font-size: 17px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 0;
 }
 
 @media (max-width: 991px) {
