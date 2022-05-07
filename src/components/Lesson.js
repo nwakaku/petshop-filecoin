@@ -140,6 +140,7 @@ function Lesson() {
                   onChange={(e) =>
                     formProps.setFieldValue("video", e.target.files[0])
                   }
+                  required
                 />
                 <button className="video_submit" type="submit">
                   Upload

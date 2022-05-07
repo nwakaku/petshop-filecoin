@@ -136,6 +136,10 @@ function Second({ dataUrl }) {
         <h3 className="widget"><Link to='/'>Login</Link></h3>
       </div>
 
+      <div className="main">
+        
+      </div>
+
       {/* <div className="main">
         <Formik
           initialValues={{ video: "" }}
@@ -192,7 +196,7 @@ function Second({ dataUrl }) {
                 </div>
               ))
             ) : (
-              <h3>Upload videos</h3>
+              <h3>Please wait while videos load</h3>
             )}
           </div>
         </div>
