@@ -124,6 +124,9 @@ function Second({ dataUrl }) {
 //     }
 //   }
 
+  //  const jug = `https://ipfs.io/ipfs/${sweet}`; 
+
+
   return (
     <div className="App">
       <div className={ `${popUp ? 'popup' : 'popup active'}`} id="popup-1">
@@ -183,7 +186,7 @@ function Second({ dataUrl }) {
           <div className="main-video">
             <div className="video">
               {imageSrc ? (
-                <video src={imageSrc} controls autoPlay />
+                <video src={`https://ipfs.io/ipfs/${imageSrc}`} controls autoPlay />
               ) : (
                 <video src={videos} controls loop autoPlay />
               )}
@@ -191,6 +194,7 @@ function Second({ dataUrl }) {
               <h3 className="title">something nice</h3>
             </div>
           </div>
+          {/* const url = `https://ipfs.io/ipfs/${file.cid}`; */}
 
           {/* side videos */}
           <div className="video-list">
@@ -201,7 +205,7 @@ function Second({ dataUrl }) {
                   key={index}
                   onClick={() => setImageSrc(url)}
                 >
-                  <video src={url} autoPlay />
+                  <video src={`https://ipfs.io/ipfs/${url}`} autoPlay />
                   <h3 className="title">something nice</h3>
                 </div>
               ))

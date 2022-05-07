@@ -95,8 +95,8 @@ function Lesson() {
     // console.log(files);
     for (const file of files) {
       // setHashes((prev) => [...prev, file.cid]);
-      const url = `https://ipfs.io/ipfs/${file.cid}`;
-      setFileUrl((prev) => [...prev, url]);
+      // const url = `https://ipfs.io/ipfs/${file.cid}`;
+      setFileUrl((prev) => [...prev, file.cid]);
       console.log(`${file.cid} ${file.name} ${file.size}`);
       // console.log(fileUrl);
     }
@@ -111,7 +111,10 @@ function Lesson() {
             &times;
           </div>
           <h1>Hash Phrase</h1>
-          <p>{`${ hashes }`}</p>
+          {hashes.length !== 0 ? 
+          (<p>`${ hashes }`</p>) : 
+          (<p>Nohting to show</p>)}
+          
         </div>
       </div>
 
@@ -156,7 +159,7 @@ function Lesson() {
           <div className="main-video">
             <div className="video">
               {imageSrc ? (
-                <video src={imageSrc} controls autoPlay />
+                <video src={`https://ipfs.io/ipfs/${imageSrc}`} controls autoPlay />
               ) : (
                 <video src={videos} controls loop autoPlay />
               )}
@@ -174,7 +177,7 @@ function Lesson() {
                   key={index}
                   onClick={() => setImageSrc(url)}
                 >
-                  <video src={url} autoPlay />
+                  <video src={`https://ipfs.io/ipfs/${url}`} autoPlay />
                   <h3 className="title">something nice</h3>
                 </div>
               ))
