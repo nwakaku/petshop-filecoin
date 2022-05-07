@@ -1,3 +1,5 @@
+import axios from "axios";
+import React from "react";
 import { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Web3Storage } from "web3.storage";
@@ -16,16 +18,24 @@ function Second({ dataUrl }) {
   // const [nuxt, setNuxt] = useState();
   const [popUp, setPopUp] = useState(true);
 
-  useEffect(() => {
-    fetch(`http://${dataUrl}`)
-    .then(res => res.json())
-    .then((data) => {
-      setHashes(data);
-      console.log(data);
-    })
-    .catch(console.log("error"));
-  }
-  , [dataUrl])
+  React.useEffect(() => {
+    axios.get(`http://${dataUrl}`).then((response) => {
+      setHashes(response.data);
+    });
+  }, [dataUrl]);
+
+  
+
+  // useEffect(() => {
+  //   fetch(`http://${dataUrl}`)
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     setHashes(data);
+  //     console.log(data);
+  //   })
+  //   .catch(console.log("error"));
+  // }
+  // , [dataUrl])
   
 
 
