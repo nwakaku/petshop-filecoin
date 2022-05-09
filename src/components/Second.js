@@ -19,7 +19,7 @@ function Second({ dataUrl }) {
   const [popUp, setPopUp] = useState(true);
 
   React.useEffect(() => {
-    axios.get(`http://${dataUrl}`).then((response) => {
+    axios.get(`https://${dataUrl}`).then((response) => {
       setHashes(response.data);
     });
   }, [dataUrl]);
