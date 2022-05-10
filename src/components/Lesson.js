@@ -121,7 +121,8 @@ function Lesson() {
 
 
       <div className="starter">
-        <h1 className="widget">ShortvideoS</h1>
+        <h1 className="widget"><i class="fa fa-podcast" aria-hidden="true"></i>
+TutvideoS</h1>
         <h3 className="widget"><Link to='/'>Login</Link></h3>
       </div>
 

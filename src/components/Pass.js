@@ -39,8 +39,10 @@ function Pass({dataUrl, setDataUrl}) {
       {/* <Link to="/videos">Expenses</Link> */}
       <div className="wrapper">
         <div className="title-text">
-          <div className="title login">View playlist</div>
-          {/* <div className="title signup">Signup Form</div> */}
+          <div className="title login">
+            <i class="fa fa-podcast" aria-hidden="true"></i>
+            TutvideoS</div>
+          {/* <div className="title signup"></div><p>View Playlist</p> */}
         </div>
         <div className="form-container">
           {/* <div className="slide-controls">
