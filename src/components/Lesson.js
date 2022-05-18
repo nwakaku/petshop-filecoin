@@ -113,7 +113,7 @@ function Lesson() {
           <h1>Hash Phrase</h1>
           {hashes.length !== 0 ? 
           (<p> {hashes} </p>) : 
-          (<p>Nohting to show</p>)}
+          (<p>Loading Please be patient</p>)}
           
         </div>
       </div>
